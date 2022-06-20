@@ -9,8 +9,12 @@ services:
     ports:
       - 80:80
 
-  nodejs:
-    build: ./
+  app1:
+    build: ./apps/app1
+    networks:
+      - backend-network
+  app2:
+    build: ./apps/app2
     networks:
       - backend-network
 

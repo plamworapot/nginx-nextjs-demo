@@ -1,7 +1,7 @@
 FROM mhart/alpine-node
 
 WORKDIR /app
-COPY ./app .
+COPY . .
 
 RUN yarn install
 RUN yarn build
